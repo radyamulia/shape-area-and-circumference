@@ -12,6 +12,7 @@ ________________________________________________________________________________
 ### Source files description (./src): ###
     FileHandler.java        -> handling files created, files overwrite, and files read (.txt)
     Tester.java             -> main class for testing and debugging
+    Test.java               -> main class to run the program
     FormulaInterface.java   -> Methods Interface for Formula.java
     Formula.java            -> Method Implementation from FormulaInterface.java
     Circle.java, etc        -> To fulfill what has been learned before
