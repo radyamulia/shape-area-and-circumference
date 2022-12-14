@@ -22,9 +22,8 @@ ________________________________________________________________________________
         a. Interface        -> FormulaInterface.java
         b. Abstraction      -> Circle.java - CircleWithRadius.java - CircleWithDiameter.java
         c. Encapsultaion    -> Circle.java - CircleWithRadius.java - CircleWithDiameter.java
-        d. Inheritance      -> 
+        d. Inheritance      -> Circle.java
         e. Polymorphism     -> Circle.java
-
     2. Java User Input
     3. Java Date                                                            => Test.java
     4. Java File Handling (From Creating files - Delete files)              => FileHandler.java
