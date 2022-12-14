@@ -50,7 +50,7 @@ public class Test {
         while (true) {
 
             Date date = new Date();
-            Boolean done = false;
+            // Boolean done = false;
             System.out.println("---- MAIN MENU ----");
             System.out.println("Select the menu you want below");
             mainMenuList.forEach(menuPrinter);
@@ -84,7 +84,7 @@ public class Test {
                     subMenuList.forEach(menuPrinter);
 
                     // INPUT AND CHECKING STATE
-                    while (!done) {
+                    while (true) {
                         System.out.print(">>> ");
                         try { // Java exceptions to limit the chosen menu and catch error
                             menuIn = input.nextInt();
@@ -131,8 +131,8 @@ public class Test {
                             break;
 
                         case 5:
+                            input.nextLine(); // consume newline
                             while (true) {
-                                input.nextLine(); // consume newline
                                 System.out.print("What do you want to use for the circle (radius/diameter): ");
                                 try {
                                     // System.out.print(">>> ");
@@ -175,7 +175,7 @@ public class Test {
                     subMenuList.forEach(menuPrinter);
 
                     // INPUT AND CHECKING STATE
-                    while (!done) {
+                    while (true) {
                         System.out.print(">>> ");
                         try { // Java exceptions to limit the chosen menu and catch error
                             menuIn = input.nextInt();
@@ -222,8 +222,8 @@ public class Test {
                             break;
 
                         case 5:
+                            input.nextLine(); // consume newline
                             while (true) {
-                                input.nextLine(); // consume newline
                                 System.out.print("What do you want to use for the circle (radius/diameter): ");
                                 try {
                                     circle = input.nextLine();
@@ -267,8 +267,7 @@ public class Test {
                         System.out.format("%d. %s%n", ++counter, object.getName());
                     }
 
-                    if (counter == 1) {
-
+                    if (counter != 0) {
                         input.nextLine(); // consume the new line so it doesn't affect input below
                         System.out
                                 .print("Type the file name to read history or type 99 to go back to MAIN MENU\n>>>  ");
@@ -292,7 +291,7 @@ public class Test {
                         System.out.format("%d. %s%n", ++counter, object.getName());
                     }
 
-                    if (counter == 1) {
+                    if (counter != 0) {
                         input.nextLine(); // consume the new line so it doesn't affect input below
                         System.out.print(
                                 "Type the file name to delete history or type 99 to go back to MAIN MENU\n>>>  ");
