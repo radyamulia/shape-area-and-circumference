@@ -49,7 +49,7 @@ public class Formula implements FormulaInterface {
     public double triangleArea() {
         System.out.print("Input the base length of the triangle: ");
         double base = input.nextDouble();
-        System.out.print("Input the haight of the triangle: ");
+        System.out.print("Input the height of the triangle: ");
         double height = input.nextDouble();
         return ((double) 1 / 2) * base * height;
     }

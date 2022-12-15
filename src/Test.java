@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat; // import this class to format date
 import java.io.File; // Import this class to read directory
 import java.util.function.Consumer;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Test {
     public static void main(String[] args) {
@@ -34,8 +35,8 @@ public class Test {
                 "3. Open history", "4. Delete history", "0. Exit program" };
 
         // Passing mainMenu and subMenu to ArrayList
-        ArrayList<String> subMenuList = new ArrayList<String>();
-        ArrayList<String> mainMenuList = new ArrayList<String>();
+        ArrayList<String> subMenuList = new ArrayList<String>(); // ArrayList
+        LinkedList<String> mainMenuList = new LinkedList<String>(); // Wrapper classes and LinkedLIst
 
         for (String str : subMenu)
             subMenuList.add(str);
@@ -48,12 +49,14 @@ public class Test {
 
         // MAIN LOOP (FOR THE WHOLE PROGRAM)
         while (true) {
+            Iterator<String> it = mainMenuList.iterator(); // Iterator
 
             Date date = new Date();
             // Boolean done = false;
             System.out.println("---- MAIN MENU ----");
             System.out.println("Select the menu you want below");
-            mainMenuList.forEach(menuPrinter);
+            while (it.hasNext())
+                System.out.println(it.next());      // Java Iterator
 
             // INPUT AND CHECKING STATE
             while (true) {
